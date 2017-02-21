@@ -3,7 +3,7 @@
 #include <ESP8266WiFi.h>  
 
 
-#define TOKEN "EXOncCi9hFnsb8IQ9qEP1UkuzMeY5R"  // Put here your Ubidots TOKEN
+#define TOKEN "XXXXXXXXXXXXXXXXXXXXXXXX"  // Put here your Ubidots TOKEN
 
 #define wifi_ssid "Alert! Virus Found!!!"
 #define wifi_password "donotconnectitwifiroutervirus"
@@ -71,10 +71,8 @@ void loop() {
       float hic = dht.computeHeatIndex(t, h, false);
     
 
-    ubidots.add("5848419a76254204193d48b9", t);  // Change for your variable name
-    ubidots.add("584841a1762542031c6fc381", h);
-//    ubidots.add("heatindex", hif);
-//    ubidots.add("dewpoint", hic);
+    ubidots.add("111111111111111111111111", t);  // Change this ID for your variable name
+    ubidots.add("222222222222222222222222", h);  // Change this ID for your variable name
     ubidots.sendAll();
     delay(1000);
 }
